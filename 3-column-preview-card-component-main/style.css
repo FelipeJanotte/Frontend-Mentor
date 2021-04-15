@@ -1,0 +1,122 @@
+/* 
+  Mobile : 375px
+  Desktop : 1440px
+*/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+  --primary-orange: #e38826;
+  --primary-dark-cyan: #006970;
+  --primary-very-dark-cyan: #004241;
+  --transparent-white: #ffffffbf;
+  --light-gray: #f2f2f2;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: var(--light-gray);
+  position: relative; 
+  height: 100vh;
+}
+
+.content{
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.sedan{
+  background: var(--primary-orange);
+  border-radius: 15px 15px 0 0;
+}
+.sedan button{
+  color: var(--primary-orange);
+}
+
+.suv{
+  background: var(--primary-dark-cyan);
+}
+.suv button{
+  color: var(--primary-dark-cyan);
+}
+
+.luxury{
+  background: var(--primary-very-dark-cyan);
+  border-radius: 0 0 15px 15px;
+}
+.luxury button{
+  color: var(--primary-very-dark-cyan);
+}
+
+.icon{
+  width: 4rem;
+  margin: 1.5rem 0;
+}
+
+h3{
+  color: var(--light-gray);
+  font-family: 'Big Shoulders Display',sans-serif;
+  font-size: 2rem;
+  margin: 0 0 1.5rem 0;
+}
+
+p{
+  color:var(--transparent-white);
+  font-family: 'Lexend Deca',sans-serif;
+  margin: 2rem 0;
+}
+
+button{
+  width: 70%;
+  font-family: 'Lexend Deca',sans-serif;
+  padding: 1rem;
+  border-radius: 50px;
+  border: solid 2px transparent;
+  transition: ease-in-out 0.15s;
+  cursor:pointer;
+  margin: auto 0 0 0;
+}
+button:hover{
+  border: 2px solid var(--transparent-white);
+  background: none;
+  color: var(--transparent-white);
+}
+
+@media only screen and (min-width:875px){
+  .content{
+    flex-direction: row;
+    height: 100%;
+    padding: 5rem;
+
+  }
+  .card{
+    padding: 5rem;
+  }
+  .icon{
+    width: 6rem;
+    margin: 15px 0;
+  }
+  .sedan{
+    border-radius: 15px 0 0 15px;
+  }
+  .luxury{
+    border-radius: 0 15px 15px 0;
+  }
+  h3{
+    font-size: 3rem;
+  }
+  p{
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: auto 0;
+  }
+}
